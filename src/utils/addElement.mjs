@@ -12,7 +12,7 @@ export const addElement = props => {
     ...other
   } = props || {};
 
-  let output;
+  let output, node;
   parent instanceof Node && (
     // Add comment.
     output = addComment(comment, parent),
