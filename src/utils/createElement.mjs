@@ -15,9 +15,9 @@ export const createElement = (tag, attributes, node) => {
   ));
 
   // Create element.
-  node instanceof Element || (tag && (node = document.createElement(`${tag}`)));
-
-  if (!(node instanceof Element)) return null;
+  if(!((node instanceof Element)
+    || (tag && (node = document.createElement(`${tag}`))))
+  ) return null;
 
   // Set inner html.
   attributes.innerHTML && (
