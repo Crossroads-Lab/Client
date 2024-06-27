@@ -40,7 +40,8 @@ export const createElement = (tag, attributes, node) => {
 
   // Set other element attributes.
   for (const k in attributes) {
-    node.setAttribute(k, attributes[k]);
+    const attribute = attributes[k];
+    (attribute || (attribute === 0) || (attribute === '')) && node.setAttribute(k, attribute);
   }
 
   return node;
