@@ -19,7 +19,26 @@ export const createElement = (tag, attributes, node) => {
 
   if (!(node instanceof Element)) return null;
 
-  // Set attributes.
+  // Set inner html.
+  attributes.innerHTML && (
+    node.innerHTML = attributes.innerHTML,
+    delete attributes.innerHTML
+  );
+
+  // Set style.
+  let style;
+  if (style = attribute.style) {
+    if (typeof style === 'string') {
+      node.style.cssText = (node.style.cssText || '') + style;
+    } else if (typeof style === 'object') {
+      for (const k in style) {
+        node.style[k] = style[k];
+      }
+    }
+    delete attribute.style;
+  }
+
+  // Set other element attributes.
   for (const k in attributes) {
     node.setAttribute(k, attributes[k]);
   }
