@@ -27,7 +27,7 @@ export const createElement = (tag, attributes, node) => {
 
   // Set style.
   let style;
-  if (style = attribute.style) {
+  if (style = attributes.style) {
     if (typeof style === 'string') {
       node.style.cssText = (node.style.cssText || '') + style;
     } else if (typeof style === 'object') {
@@ -35,7 +35,7 @@ export const createElement = (tag, attributes, node) => {
         node.style[k] = style[k];
       }
     }
-    delete attribute.style;
+    delete attributes.style;
   }
 
   // Set other element attributes.
