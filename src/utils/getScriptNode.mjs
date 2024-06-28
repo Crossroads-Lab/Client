@@ -8,7 +8,7 @@ export const getScriptNode = src => {
   for (let i = 0, l = scripts.length, s, h; i !== l; ++i) {
     h = (s = scripts[i]).getAttribute('src') || s.src;
     console.log(h, src, s);
-    if (src === h) return s;
+    if (h.contains(src) || src.contains(h)) return s;
   }
 
   return null;
