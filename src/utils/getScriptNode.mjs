@@ -5,8 +5,10 @@ export const getScriptNode = src => {
   }
 
   const scripts = document.getElementsByTagName('script');
-  for (let i = 0, l = scripts.length, s; i !== l; ++i) {
-    if (src === (s = scripts[i]).src || s.getAttribute('src')) return s;
+  for (let i = 0, l = scripts.length, s, h; i !== l; ++i) {
+    h = (s = scripts[i]).getAttribute('src') || s.src;
+    console.log(h, src, s);
+    if (src === h) return s;
   }
 
   return null;
