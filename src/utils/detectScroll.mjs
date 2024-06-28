@@ -1,5 +1,5 @@
 // Imports.
-import { throttle } from 'https://crossroads-lab.github.io/Utils/src/index.mjs';
+import { throttle } from 'https://crossroads-lab.github.io/Utils/src/index.js';
 
 // Helper function to detect scroll on an element.
 const cb = throttle(event => (
