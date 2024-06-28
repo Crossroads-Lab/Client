@@ -3,7 +3,9 @@ export const getScriptNode = src => {
   if (!src) {
     try {
       src = import.meta.url;
+      console.log('src:', src);
     } catch {
+      console.log('document.currentScript:', document.currentScript);
       return document.currentScript;
     }
   }
