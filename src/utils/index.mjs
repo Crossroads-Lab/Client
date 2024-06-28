@@ -4,6 +4,7 @@ export { default as addLink } from './addLink.mjs';
 export { default as addMetaTag } from './addMetaTag.mjs';
 export { default as addTitle } from './addTitle.mjs';
 export { default as createElement } from './createElement.mjs';
+export { default as detectScroll } from './detectScroll.mjs';
 export { default as getScriptNode } from './getScriptNode.mjs';
 export { default as head } from './head.mjs';
 export { default as style } from './style.mjs';
