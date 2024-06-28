@@ -1,13 +1,7 @@
 // Helper function to get a script node.
 export const getScriptNode = src => {
   if (!src) {
-    try {
-      src = import.meta.url;
-      console.log('src:', src);
-    } catch {
-      console.log('document.currentScript:', document.currentScript);
-      return document.currentScript;
-    }
+    return document.currentScript;
   }
 
   const scripts = document.getElementsByTagName('script');
