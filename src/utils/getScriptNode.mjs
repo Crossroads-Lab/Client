@@ -4,6 +4,9 @@ export const getScriptNode = src => {
     return document.currentScript;
   }
 
+  if (src instanceof HTMLScriptElement) return src;
+  if (typeof src !== 'string') return null;
+
   const scripts = document.getElementsByTagName('script');
   for (let i = 0, l = scripts.length, s, h; i !== l; ++i) {
     h = (s = scripts[i]).getAttribute('src') || s.src;
