@@ -7,3 +7,4 @@ export { default as createElement } from './createElement.mjs';
 export { default as getScriptNode } from './getScriptNode.mjs';
 export { default as head } from './head.mjs';
 export { default as style } from './style.mjs';
+export { default as removeScriptNode } from './removeScriptNode.mjs';
