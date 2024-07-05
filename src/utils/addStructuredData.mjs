@@ -10,7 +10,7 @@ export const addStructuredData = props => {
     parent: head,
     type: 'application/ld+json',
     comment,
-    innerHTML: JSON.stringify(data),
+    innerHTML: JSON.stringify(data, null, 2),
   }) || null;
 }
 
