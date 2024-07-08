@@ -7,4 +7,5 @@ export const style = (head.getElementsByTagName('style') || [])[0]
     addComment('Styles'),
     head.appendChild(document.createElement('style'))
   );
+style.innerHTML || (style.innerHTML = '');
 export default style;
